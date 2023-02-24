@@ -610,8 +610,8 @@ footer ul li:active::after{
         font-size: 1.3em;
     }
     .fruit{
-        width: 292px;
-        height: 463px;
+        width: 359px;
+        height: 610px;
     }
 
 
@@ -622,8 +622,8 @@ footer ul li:active::after{
     font-size: 1.3em;
 }
 .ai {
-    width: 48vw;
-    height: 42vh;
+    width: 51vw;
+    height: 34vh;
     border-radius: 56% 44% 67% 33% / 33% 50% 50% 67%;
 }
 .conteneurc4d {
@@ -634,12 +634,12 @@ footer ul li:active::after{
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
 .cinema4d{
-    height: 85vh;
+    height: 78vh;
 }
 .cinema4d h1{
     font-size: 2em;
@@ -757,7 +757,8 @@ footer ul{
         .intro .bulle{
             width: 30vw;
             height: 30vh;
-            padding: 129px;
+            padding: 152px;
+            padding-top: 75px;
         }
         .bulle h1{
             font-size: 3em;
@@ -777,8 +778,8 @@ footer ul{
 
 }
 .fruit{
-    width: 320px;
-    height: 530px;
+    width: 300px;
+    height: 450px;
     transition: all 0.5s ease-out;
 }
 .fruit:hover{
@@ -870,7 +871,7 @@ height: 100vh;
     padding-top: 0px;
 }
 .cinema4d{
-    height: 100vh;
+    height: 105vh;
 }
 .modelisation{
     width: 353px;
@@ -883,7 +884,7 @@ height: 100vh;
 
 
 .imagec4d{
-    margin-top: 200px;
+    margin-top: 105px;
     width: 350px;
     height: 350px;
     transition: 0.5s;
