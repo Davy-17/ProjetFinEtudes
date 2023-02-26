@@ -26,18 +26,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 ::selection {
     background: red;
     color: rgb(255, 255, 255);
@@ -101,8 +89,8 @@ header{
     width: 70px;
     height: 87px;
     z-index: 2;
-    top: 25px;
-    left: -10px;
+    top: 4.5vh;
+    left: 5vw;
     cursor: pointer;
 }
 
@@ -110,8 +98,6 @@ header{
     position: absolute;
     width: 50px;
     height: 50px;
-    top: 15px;
-    left: 30px;
 
 }
 .lien{
@@ -119,7 +105,6 @@ header{
 }
 .lien ul{
 padding: 0;
-margin-left: 15px;
 }
 .lien li{
     list-style-type: none;
@@ -228,7 +213,7 @@ border-radius: 20px;
     font-size: 1.5em;
     text-decoration: none;
     font-weight: bold;
-    -webkit-text-stroke: .1px #ff1616;
+    -webkit-text-stroke: 1px #ff1616;
     letter-spacing: 3px;
 }
 .vague a:nth-child(1){
@@ -298,7 +283,7 @@ height: 43vh;
     width: 58vw;
     height: 32vh;
     border-radius: 47% 53% 63% 37% / 64% 43% 57% 36% ;
-    animation: bulleBouge 16s forwards ease 1.5s infinite alternate-reverse;
+    animation: bulleBouge 13s forwards ease 1.5s infinite alternate-reverse;
 }
 
 /*Section cinema 4D*/
@@ -330,16 +315,16 @@ height: 43vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 72vw;
+        width: 71vw;
         height: 32vh;
         background-color: #FF8484;
         margin: 0;
         border-radius: 71% 29% 44% 56% / 45% 35% 65% 55% ;
-        animation: bulleTexteBouge 16s forwards ease 1.5s infinite alternate-reverse;
+        animation: bulleTexteBouge 13s forwards ease 1.5s infinite alternate-reverse;
         transition-duration: .9s;
     }
     .corona{
-        animation: bulleBouge 16s forwards ease 1.5s infinite alternate-reverse;
+        animation: bulleBouge 13s forwards ease 1.5s infinite alternate-reverse;
     }
     .modelisation:hover{
         background-color: #ffffff;
@@ -353,8 +338,7 @@ height: 43vh;
         color: white;
         font-family: 'Montserrat', sans-serif;
         width: 200px;
-        font-size: 1.2em;
-        font-size: 1em;
+        font-size: 0.85em;
        
     }
     .imagec4d{
@@ -362,7 +346,7 @@ height: 43vh;
         height: 32vh;
         margin: 0;
         border-radius: 47% 53% 63% 37% / 64% 43% 57% 36% ;
-        animation: bulleBouge 16s forwards ease 1.5s infinite alternate-reverse;
+        animation: bulleBouge 13s forwards ease 1.5s infinite alternate-reverse;
     }
     .texture{
         width: 250px;
@@ -398,8 +382,8 @@ height: 43vh;
 .rf{
     width: 66vw;
     height: 38vh;
-    border-radius: 47% 53% 63% 37% / 64% 43% 57% 36% ;
-    animation: bulleBouge 16s forwards ease 1.5s infinite alternate-reverse;
+    border-radius: 61% 39% 50% 50% / 44% 40% 60% 56% ;
+    animation: bulleBouge 13s forwards ease 1.5s infinite alternate-reverse;
     
 }
 /*Section résultats*/
@@ -407,7 +391,7 @@ height: 43vh;
     padding-top: 20px;
     width: 100vw;
     height: 30vh;
-    background-color: #ff0000;
+    background-color: #ff1a1a;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -523,22 +507,22 @@ footer ul li:active::after{
 /*Animation*/
 @keyframes bulleBouge {
     0%{
-        border-radius: 52% 48% 50% 50% / 30% 30% 70% 70% 
+        border-radius: 49% 51% 52% 48% / 46% 42% 58% 54%;
     }
     20%{
-        border-radius: 42% 58% 44% 56% / 50% 37% 63% 50%;
+        border-radius: 52% 48% 65% 35% / 42% 53% 47% 58% ;
     }
     40%{
-        border-radius: 50% 50% 56% 44% / 44% 51% 49% 56%;
+        border-radius: 50% 50% 46% 54% / 44% 48% 52% 56% ;
     }
     60%{
-        border-radius: 57% 43% 64% 36% / 33% 60% 40% 67% ; 
+        border-radius: 42% 58% 44% 56% / 52% 38% 62% 48% ;
     }
     80%{
-        border-radius: 54% 46% 42% 58% / 51% 37% 63% 49%; 
+        border-radius: 52% 48% 58% 42% / 49% 64% 36% 51% ;
     }
     100%{
-        border-radius: 69% 31% 82% 18% / 28% 64% 36% 72%; 
+        border-radius: 62% 38% 65% 35% / 36% 44% 56% 64%;
     }
 
 
@@ -598,7 +582,9 @@ footer ul li:active::after{
         top: -42vh;
         left: -109vw;
     }
-
+    .vague a{
+        -webkit-text-stroke: .1px #ff1616;
+    }
 
     .logo{
         width: 100px;
@@ -622,7 +608,7 @@ footer ul li:active::after{
     font-size: 1.3em;
 }
 .ai {
-    width: 51vw;
+    width: 48vw;
     height: 34vh;
     border-radius: 56% 44% 67% 33% / 33% 50% 50% 67%;
 }
@@ -639,22 +625,23 @@ footer ul li:active::after{
 }
 
 .cinema4d{
-    height: 78vh;
+    height: 80vh;
 }
 .cinema4d h1{
     font-size: 2em;
 }
 
 .modelisation{
-    width: 38vw;
-    height: 28vh;
+    width: 41vw;
+    height: 25vh;
 }
 .modelisation p{
-    font-size: 1.1em;
+    font-size: 1em;
+    width: 21vw;
 }
 .imagec4d{
-    width: 38vw;
-    height: 28vh;
+    width: 41vw;
+    height: 25vh;
 }
 .rf {
     width: 51vw;
@@ -729,9 +716,13 @@ footer ul{
         position: relative;
         margin-top: 15px;
     }
+    .vague a{
+        -webkit-text-stroke: .1px #ff1616;
+    }
     .menu{
-        width: 905px;
+        width: 972px;
         position: relative;
+        top: 2.5vh;
     }
     .lien{
         display: block;
@@ -757,8 +748,8 @@ footer ul{
         .intro .bulle{
             width: 30vw;
             height: 30vh;
-            padding: 152px;
-            padding-top: 75px;
+            padding: 137px;
+            padding-top: 117px;
         }
         .bulle h1{
             font-size: 3em;
@@ -801,7 +792,7 @@ color: #823737;;
             }
 
 .intro .bulle{
-    animation: bulleBouge 16s forwards ease 1.5s infinite alternate-reverse;
+    animation: bulleBouge 15s forwards ease 1.5s infinite alternate-reverse;
     border-radius: 67% 33% 44% 56% / 47% 51% 49% 53% ; 
     transition-duration: 0.9s;
 }
@@ -874,11 +865,12 @@ height: 100vh;
     height: 105vh;
 }
 .modelisation{
-    width: 353px;
-    height: 331px;
+    width: 313px;
+    height: 316px;
 }
 .modelisation p{
-    font-size: 1.2em;
+    font-size: 1.1em;
+    width: 33vh;
     transition-duration: 0.9s;
 }
 
@@ -991,22 +983,22 @@ footer ul li:active::after{
 
 @keyframes bulleBouge {
     0%{
-        border-radius: 67% 33% 44% 56% / 47% 51% 49% 53% ;
+        border-radius: 49% 51% 52% 48% / 46% 42% 58% 54%;
     }
     20%{
-        border-radius: 42% 58% 44% 56% / 50% 37% 63% 50%;
+        border-radius: 52% 48% 65% 35% / 42% 53% 47% 58% ;
     }
     40%{
-        border-radius: 50% 50% 56% 44% / 44% 51% 49% 56%;
+        border-radius: 50% 50% 46% 54% / 44% 48% 52% 56% ;
     }
     60%{
-        border-radius: 57% 43% 64% 36% / 33% 60% 40% 67% ; 
+        border-radius: 42% 58% 44% 56% / 52% 38% 62% 48% ;
     }
     80%{
-        border-radius: 54% 46% 42% 58% / 51% 37% 63% 49%; 
+        border-radius: 52% 48% 58% 42% / 49% 64% 36% 51% ;
     }
     100%{
-        border-radius: 69% 31% 82% 18% / 28% 64% 36% 72%; 
+        border-radius: 62% 38% 65% 35% / 36% 44% 56% 64%;
     }
 
 
