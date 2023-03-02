@@ -116,9 +116,9 @@ padding: 0;
 }
 .lien li{
     list-style-type: none;
-    width: 170px;
+    width: 187px;
     height: 49px;
-   /* margin-top: 1em;*/
+    margin-top: 3em;
     
 
 }
@@ -684,6 +684,7 @@ quand on dépasse 625px
     }
     .vague a{
         -webkit-text-stroke: .1px #ff1616;
+        font-size: 2em;
     }
 
     .logo{
@@ -699,7 +700,12 @@ quand on dépasse 625px
         width: 36vw;
         height: 50vh;
     }
-
+    .lien li {
+        list-style-type: none;
+        width: 251px;
+        height: 49px;
+        margin-top: 3em;
+    }
 
 .titreDesign h1{
     font-size: 2em;
