@@ -13,33 +13,38 @@
     border-radius: 10px;
   }
    
-  /* Handle */
+  /* Barre */
   ::-webkit-scrollbar-thumb {
     background: red; 
     border-radius: 10px;
     cursor: url("images/curseur.png"), auto;
   }
   
-  /* Handle on hover */
+  /* Barre en survol */
   ::-webkit-scrollbar-thumb:hover {
     background: #b30000; 
   }
 
 
-
+/*Quand le texte est sélectionné*/
 ::selection {
     background: red;
     color: rgb(255, 255, 255);
   }
+
+/*Pour que le défillement entre chaque section soit doux et progressif*/
 html{
     scroll-behavior: smooth;
 }
+
+/*Change le curseur*/
 body{
     background-color:#FFA8A8 ;
     overflow-x: hidden;
     cursor: url("images/curseur.png"), auto;
 }
 
+/*Le background du menu*/
 .bgMenu{
     width: 0vw;
     height: 95vh;
@@ -76,6 +81,7 @@ header{
     flex-direction: column-reverse;
    
 }
+/*Quand la page est scrollé*/
 .scroller{
     background-color: white;
     opacity: 1;
@@ -121,7 +127,7 @@ padding: 0;
     color: #FF0000;
     font-family: 'Days One', sans-serif;
 }
-
+/*Barre du menu burger*/
 .barre{
 height: 3px;
 background-color:#FF0000 ;
@@ -203,8 +209,7 @@ border-radius: 20px;
     position: relative;
 }
 
-
-/*test*/
+/*Lien des pages/sections*/
 
 .vague{
     position: relative;
@@ -425,20 +430,6 @@ video{
     height: 20vh;
     border-radius: 20px;
 }
-.texteJoindre{
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    color: #FF8484;
-    padding-bottom: 1em;
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -481,7 +472,7 @@ video{
 	display: block;
 	animation:zoom 1s ease;
 }
-/*Zoom l images des slides quand elle devient active*/
+/*Dézoom l images des slides quand elle devient active*/
 @keyframes zoom{
 	0%{
         transform: scale(2);opacity: 0
@@ -598,24 +589,6 @@ footer ul li:active::after{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Animation
 anime le contour des images pour former des bulles sur environ 15 secondes (défini plus haut)
 
@@ -646,6 +619,13 @@ L'animation change progressivement à chaque pourcentage du temps de 15 secondes
 
 }
 /*Animation*/
+/*Animation
+anime le contour des images pour former des bulles sur environ 15 secondes (défini plus haut)
+
+chaque coin est animé
+L'animation change progressivement à chaque pourcentage du temps de 15 secondes
+
+*/
 @keyframes bulleTexteBouge {
     0%{
         border-radius: 71% 29% 44% 56% / 45% 35% 65% 55% ;
@@ -1112,9 +1092,13 @@ footer ul li:active::after{
 }
 
 
+/*Animation
+anime le contour des images pour former des bulles sur environ 15 secondes (défini plus haut)
 
+chaque coin est animé
+L'animation change progressivement à chaque pourcentage du temps de 15 secondes
 
-
+*/
 @keyframes bulleBouge {
     0%{
         border-radius: 49% 51% 52% 48% / 46% 42% 58% 54%;

@@ -70,7 +70,7 @@ window.onload=changeImg;
 var slides=document.querySelector('.slider-items').children;
 var slideDroite=document.querySelector(".slideDroite");
 var slideGauche=document.querySelector(".slideGauche");
-var totalSlides=slides.length;
+var totalSlides=slides.length;/*6*/
 var index=0;
 
 slideDroite.onclick=function () {
@@ -88,6 +88,7 @@ function next(direction){
 	 index++;
 
 		/*L'index se remet à zéro une fois qu'on DÉPASSE la dernière slide (dernier index), on revient à la première slide */
+		/*Si index=6 on revient à 0 */
 	  if(index==totalSlides){
 	   index=0;
 	  }
@@ -96,7 +97,8 @@ function next(direction){
 /*Si cliques à gauche */
   else{
 	
-	/*et que la slide est la première, on revient à la dernière slide */
+	/*et que la slide était la première*/
+	/*6-1 = index 5, car de 0 à 5 c'est les index total,on revient à la dernière slide (index de 5) */
 		  if(index==0){
 		   index=totalSlides-1;
 		  }
