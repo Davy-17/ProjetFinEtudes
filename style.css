@@ -397,7 +397,7 @@ height: 43vh;
 .resultats{
     padding-top: 20px;
     width: 100vw;
-    height: 70vh;
+    height: 138vmin;
     background-color: #ff1a1a;
     display: flex;
     flex-wrap: nowrap;
@@ -495,7 +495,7 @@ background-color: rgba(0,0,0,.3);
 line-height: 60px;
 text-align: center;
 color: #ffffff;
-font-size: 30px;
+font-size: 1.3em;
 font-family: 'Montserrat', sans-serif;
 
 }
@@ -737,7 +737,6 @@ quand on dépasse 625px
 }
 .modelisation p{
     font-size: 1em;
-    width: 21vw;
 }
 .imagec4d{
     width: 41vw;
@@ -762,7 +761,7 @@ video{
     border-radius: 20px;
 }
 .resultats{
-    height: 75vh;
+    height: 99vmin;
 }
 .resultats h1{
     font-size: 2em;
@@ -904,6 +903,9 @@ color: #823737;;
     animation: bulleBouge 15s forwards ease 1.5s infinite alternate-reverse;
     border-radius: 67% 33% 44% 56% / 47% 51% 49% 53% ; 
     transition-duration: 0.9s;
+}
+.intro .bulle p {
+    font-size: 1.3vw;
 }
 /*Section design*/
 .titreDesign{
