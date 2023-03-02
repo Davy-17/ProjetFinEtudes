@@ -118,7 +118,7 @@ padding: 0;
     list-style-type: none;
     width: 170px;
     height: 49px;
-    margin-top: 60px;
+   /* margin-top: 1em;*/
     
 
 }
@@ -547,7 +547,7 @@ justify-content: center;
 align-items: center;
 position: relative;
 z-index: 0;
-
+margin-top: 1em;
 }
 footer ul li a{
     text-decoration: none;
@@ -696,8 +696,8 @@ quand on dépasse 625px
         font-size: 1.3em;
     }
     .fruit{
-        width: 359px;
-        height: 610px;
+        width: 36vw;
+        height: 50vh;
     }
 
 
@@ -786,6 +786,9 @@ footer ul{
     height: 5vh;
     flex-direction: row;
 }
+footer ul li{
+    margin-top: 0;
+    }
 
 
 }
@@ -1066,7 +1069,7 @@ footer ul li{
     transition-duration: 0.5s;
 }
 footer ul li a{
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 footer ul li::after{
     width: 130px;
