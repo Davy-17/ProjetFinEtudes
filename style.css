@@ -17,6 +17,7 @@
   ::-webkit-scrollbar-thumb {
     background: red; 
     border-radius: 10px;
+    cursor: url("images/curseur.png"), auto;
   }
   
   /* Handle on hover */
@@ -36,6 +37,7 @@ html{
 body{
     background-color:#FFA8A8 ;
     overflow-x: hidden;
+    cursor: url("images/curseur.png"), auto;
 }
 
 .bgMenu{
@@ -222,7 +224,7 @@ border-radius: 20px;
 }
 .vague a:nth-child(2){
     color: #ff1616;
-    animation: animate 5s ease-in-out infinite ;
+    animation: animeLiens 5s ease-in-out infinite ;
     padding: 10px;
 }
 
@@ -390,7 +392,7 @@ height: 43vh;
 .resultats{
     padding-top: 20px;
     width: 100vw;
-    height: 30vh;
+    height: 70vh;
     background-color: #ff1a1a;
     display: flex;
     flex-wrap: nowrap;
@@ -404,6 +406,15 @@ height: 43vh;
     font-size: 1.5em;
     color: #000000;
 }
+.resultats h2{
+    font-family: 'Days One', sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.5em;
+    color: #000000;
+}
+
 
 iframe{
     display: flex;
@@ -414,6 +425,89 @@ video{
     height: 20vh;
     border-radius: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*SLIDER*/
+.slider{
+	max-width: 100vw;
+	position: relative;
+	overflow: hidden;
+}
+/*Quand les slide sont actives*/
+.slider .slideGauche,.slider .slideDroite{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+ background-color: #e22929;
+  border-radius: 50%;
+  color:#ffffff;
+  font-size: 20px;
+  top:50%;
+  cursor: pointer;
+  margin-top: -20px;
+  text-align: center;
+  line-height: 40px;
+  
+}
+.slider .slideGauche:hover,.slider .slideDroite:hover{
+ box-shadow: 0px 0px 10px black;
+ background-color: #ffcccc; 
+ color: black;
+}
+
+.slider .slideGauche{
+	left: 30px;
+}
+.slider .slideDroite{
+	right: 30px;
+}
+.slider .slider-items .item img{
+	max-width: 100%;
+	display: block;
+	animation:zoom 1s ease;
+}
+/*Zoom l images des slides quand elle devient active*/
+@keyframes zoom{
+	0%{
+        transform: scale(2);opacity: 0
+    }
+	100%{
+        transform: scale(1);opacity:1
+    }
+}
+.slider .slider-items .item{
+	display: none;
+	position: relative;
+}
+.slider .slider-items .item .description{
+position: absolute;
+width: 100%;
+height: 60px;
+bottom: 0px;
+left: 0px;
+background-color: rgba(0,0,0,.5);
+line-height: 60px;
+text-align: center;
+color: #ffffff;
+font-size: 30px;
+font-family: 'Montserrat', sans-serif;
+
+}
+
+.slider .slider-items .item.active{
+	display: block;
+}
+
+
 
 
 
@@ -504,7 +598,25 @@ footer ul li:active::after{
 
 
 
-/*Animation*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*Animation
+anime le contour des images pour former des bulles sur environ 15 secondes (défini plus haut)
+
+chaque coin est animé
+L'animation change progressivement à chaque pourcentage du temps de 15 secondes
+
+*/
 @keyframes bulleBouge {
     0%{
         border-radius: 49% 51% 52% 48% / 46% 42% 58% 54%;
@@ -553,8 +665,8 @@ footer ul li:active::after{
 
 
 
-
-@keyframes animate{
+/*anime les liens du menu avec un clip- path qui fait une forme de vague en masquant seulement le texte en premier plan*/
+@keyframes animeLiens{
     0%,100%{
         clip-path: polygon(0 0, 19% 0, 30% 0, 49% 0, 64% 0, 73% 0, 85% 0, 92% 0, 100% 0, 100% 0, 100% 0, 100% 100%, 0 100%);
     }
@@ -576,7 +688,9 @@ footer ul li:active::after{
 /*******************************************************************************************************/
 
 /*******************************************************************************************************/
-/*Tablette*/
+/*Tablette
+quand on dépasse 625px
+*/
 @media screen and (min-width: 625px){
     .bgOuvert .bgMenu {
         top: -42vh;
@@ -658,15 +772,23 @@ footer ul li:active::after{
     
 }
 video{
-    height: 30vh;
+    height:280px;
     border-radius: 20px;
 }
 .resultats{
-    height: 40vh;
+    height: 112vh;
 }
 .resultats h1{
     font-size: 2em;
 }
+.slider{
+	width: 500px;
+    border-radius: 25px;
+	position: relative;
+	overflow: hidden;
+}
+
+
 footer {
     justify-content: space-around;
     align-content: center;
@@ -695,7 +817,8 @@ footer ul{
 /*******************************************************************************************************/
 
 /*******************************************************************************************************/
-/*Ordinateur*/
+/*Ordinateur
+quand on dépasse 1100px*/
 @media screen and (min-width: 1100px){ 
     header{
         position: sticky;
@@ -916,7 +1039,7 @@ height: 100vh;
     }
 /* Section resultats*/
 .resultats{
-height: 60vh;
+height: 120vh;
 }
 .resultats h1{
     font-size: 2.5em;
@@ -926,7 +1049,12 @@ iframe{
     width: 600px;
     height: 400px;
 }
-
+.slider{
+	width: 625px;
+    border-radius: 25px;
+	position: relative;
+	overflow: hidden;
+}
 
 video{
     height: 48vh;
