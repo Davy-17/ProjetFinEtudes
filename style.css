@@ -425,6 +425,12 @@ video{
     height: 20vh;
     border-radius: 20px;
 }
+.texteJoindre{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #FF8484;
+    padding-bottom: 1em;
+}
 
 
 
@@ -494,7 +500,7 @@ width: 100%;
 height: 60px;
 bottom: 0px;
 left: 0px;
-background-color: rgba(0,0,0,.5);
+background-color: rgba(0,0,0,.3);
 line-height: 60px;
 text-align: center;
 color: #ffffff;
@@ -776,7 +782,7 @@ video{
     border-radius: 20px;
 }
 .resultats{
-    height: 112vh;
+    height: 75vh;
 }
 .resultats h1{
     font-size: 2em;
