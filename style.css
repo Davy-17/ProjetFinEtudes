@@ -240,6 +240,12 @@ border-radius: 20px;
     -webkit-text-stroke: 1px #ff1616;
 
 }
+.vague:active > .normal{
+    background-color: #ffffff;
+    border-radius: 15px;
+    -webkit-text-stroke: 1px #ff1616;
+
+}
 
 
 .fruit{
@@ -470,10 +476,10 @@ video{
 .slider .slider-items .item img{
 	max-width: 100%;
 	display: block;
-	animation:zoom 1s ease;
+	animation:dezoom 1s ease;
 }
 /*Dézoom l images des slides quand elle devient active*/
-@keyframes zoom{
+@keyframes dezoom{
 	0%{
         transform: scale(2);opacity: 0
     }
@@ -481,10 +487,7 @@ video{
         transform: scale(1);opacity:1
     }
 }
-.slider .slider-items .item{
-	display: none;
-	position: relative;
-}
+
 .slider .slider-items .item .description{
 position: absolute;
 width: 100%;
@@ -499,7 +502,11 @@ font-size: 1.3em;
 font-family: 'Montserrat', sans-serif;
 
 }
-
+/*Class quand on cliques ou pas sur les fleches du slider*/
+.slider .slider-items .item{
+	display: none;
+	position: relative;
+}
 .slider .slider-items .item.active{
 	display: block;
 }
@@ -618,7 +625,6 @@ L'animation change progressivement à chaque pourcentage du temps de 15 secondes
 
 
 }
-/*Animation*/
 /*Animation
 anime le contour des images pour former des bulles sur environ 15 secondes (défini plus haut)
 
@@ -627,21 +633,27 @@ L'animation change progressivement à chaque pourcentage du temps de 15 secondes
 
 */
 @keyframes bulleTexteBouge {
+    /*0 sec*/
     0%{
         border-radius: 71% 29% 44% 56% / 45% 35% 65% 55% ;
     }
+    /*3 sec*/
     20%{
         border-radius: 46% 54% 37% 63% / 45% 25% 75% 55% ;
     }
+    /*6 sec*/
     40%{
         border-radius: 57% 43% 52% 48% / 44% 21% 79% 56% ; 
     }
+    /*9 sec*/
     60%{
         border-radius: 57% 43% 48% 52% / 46% 45% 55% 54% ; 
     }
+    /*12 sec*/
     80%{
         border-radius: 64% 36% 77% 23% / 38% 53% 47% 62%; 
     }
+    /*15 sec*/
     100%{
         border-radius: 69% 31% 82% 18% / 28% 64% 36% 72%; 
     }

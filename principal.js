@@ -2,6 +2,9 @@
     document.getElementById("menu").classList.toggle("menuOuvert");
     document.getElementById("menu").classList.toggle("bgOuvert");
 }*/
+
+
+
 const menu = document.getElementById('menu');
 const bgMenu = document.getElementById('bgMenu');
 const burger = document.getElementById('burger');
@@ -33,6 +36,9 @@ if(window.scrollY > 0){
 
 }
 );
+
+
+
 /*
 
 var i = 0; 			// Start Point
@@ -66,51 +72,66 @@ function changeImg(){
 window.onload=changeImg;
 */
 
-/*slider*/
-var slides=document.querySelector('.slider-items').children;
-var slideDroite=document.querySelector(".slideDroite");
-var slideGauche=document.querySelector(".slideGauche");
-var totalSlides=slides.length;/*6*/
-var index=0;
 
+
+
+
+/*slider*/
+var slides=document.querySelector('.slider-items').children;/*toutes les slides */
+var slideDroite=document.querySelector(".slideDroite");/*div avec la class slideDroite*/
+var slideGauche=document.querySelector(".slideGauche");/*div avec la class slideGauche*/
+var totalSlides=slides.length;/*6 slides*/
+var index=0;/*index commence à 0 */
+
+
+/*Quand on clique sur les div (fleche) avec les class slideGauche ou slideDroite */
 slideDroite.onclick=function () {
-	next("droite");
+	fleche("droite"); /*parametre droite*/
 }
 slideGauche.onclick=function () {
-	next("gauche");
+	fleche("gauche"); /*parametre gauche*/
 }
 
-function next(direction){
-/* quand tu cliques à droite l'index augmente et est remis à zéro pour avoir la première slide */
+function fleche(direction){
+
+/* quand tu cliques la flèche droite l'index augmente et est remis à zéro pour avoir la première slide */
   if(direction=="droite"){
 
 	/*Index augmente de 1*/
 	 index++;
 
-		/*L'index se remet à zéro une fois qu'on DÉPASSE la dernière slide (dernier index), on revient à la première slide */
-		/*Si index=6 on revient à 0 */
+		/*Ensuite, L'index se remet à zéro une fois qu'on DÉPASSE la dernière SLIDE, donc on revient à la première slide */
+		/*Si index=6 on revient à 0 */ /* Index de 0 à 5 pour 6 slides */
 	  if(index==totalSlides){
 	   index=0;
 	  }
   } 
 
-/*Si cliques à gauche */
+
+
+/*Si cliques flèche gauche */
   else{
 	
-	/*et que la slide était la première*/
-	/*6-1 = index 5, car de 0 à 5 c'est les index total,on revient à la dernière slide (index de 5) */
+	/*6-1 = index 5, donc on revient à la dernière slide (index de 5) */
+	/*SI quand tu cliques, l'index est de 0, on revient à la dernière slide */
 		  if(index==0){
 		   index=totalSlides-1;
 		  }
-		  /* l'index dimnue de 1 */
+		  /* sinon l'index dimnue de 1 */
 		  else{
 		   index--;
 		  }
    }
-/*boucle des slides */
+
+
+/*boucle des slides, les slides n'ont pas de class par défault d'activé */
  for(i=0; i<slides.length; i++){
+
+	/*enleve la class active */
 		 slides[i].classList.remove("active");
  }
+
+ /*quand on est sur l'index, on ajoute la class active */
  slides[index].classList.add("active");     
 
  console.log(index);
